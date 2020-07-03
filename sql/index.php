@@ -3,8 +3,8 @@
 function createTableQuery($table, $block) {
   $createStmn = $table;
   $createTableStatement = '(id int NOT NULL AUTO_INCREMENT,';
-  $blockCount = count($block);
-  $i = 0;
+  // $blockCount = count($block);
+  // $i = 0;
   foreach($block as $dataKey => $dataValues) {
       $getDataType = gettype($dataValues);
 
@@ -17,8 +17,8 @@ function createTableQuery($table, $block) {
       } else {
         $createTableStatement .= '`'.$dataKey.'` varchar(255) DEFAULT NULL';
       }
-      $i++;
-
+      // $i++;
+      //
       // if($blockCount > $i) {
         $createTableStatement .= ', ';
       // }
